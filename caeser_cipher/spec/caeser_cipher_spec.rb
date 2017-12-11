@@ -18,6 +18,4 @@ describe ".cipher" do
       expect(cipher("abc")).to eql("abc")
     end
   end
-
-  context ""
 end
