@@ -1,4 +1,5 @@
-def cipher(string, shift)
+def cipher(string, shift=0)
+  result=""
   letters= string.split(//)# splits string to characters
   letters.each do |x| # selects characters
     number = x.ord # converts characters to ascii
@@ -16,12 +17,12 @@ def cipher(string, shift)
         number = (number-90) %26 + 64
       end
     end
-    print number.chr
+    result<<number.chr
   end
-
+result
 end
-puts "Hail Caesar. Please input your string."
-string= gets.chomp
-puts "Please select a number to encrypt your text"
-shift= Integer gets.chomp
-cipher(string, shift)
+#puts "Hail Caesar. Please input your string."
+#string= gets.chomp
+#puts "Please select a number to encrypt your text"
+#shift= Integer gets.chomp
+#cipher(string, shift)
